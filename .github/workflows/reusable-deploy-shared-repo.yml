@@ -26,6 +26,9 @@ jobs:
         with:
           name: ${{ inputs.package-name }}
 
+      - name: Print Repo Location
+        run: echo "Workflow stored in Shared-workflows repo"
+      
       - name: Secret Information
         run: echo "Value of secret matches - ${{ secrets.azure-profile  == 'test' }}"
 
