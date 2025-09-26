@@ -34,9 +34,9 @@ jobs:
       
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
-        uses: azure/webapps-deploy@v3
+        uses: azure/webapps-deploy@v2
         with:
           app-name: ${{ inputs.app-name }}
-          slot-name: ${{ inputs.deployment-slot }}
+          # slot-name: ${{ inputs.deployment-slot }}
           package: .
           publish-profile: ${{ secrets.azure-profile }}
